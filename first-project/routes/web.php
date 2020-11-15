@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Home;
+use App\Http\Controllers\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Home::class, 'index'])->name('index');
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile', [User::class, 'profile'])->name('profile');
+// Route::get('/profile', function () {
+//     return view('profile');
+// });
