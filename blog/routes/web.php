@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
-use App\Http\Controllers\User;
+use App\Http\Controllers\CitiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,7 @@ use App\Http\Controllers\User;
 |
 */
 
-Route::get('/', [Home::class, 'index'])->name('index');
-
-Route::get('/profile', [User::class, 'profile'])->name('profile');
-
-Route::get('/insert', [User::class, 'insert'])->name('insert');
-Route::post('/ins', [User::class, 'insertar'])->name('insertar');
+Route::get('/', [CitiesController::class, 'index']);
+Route::get('/places/{image}', [CitiesController::class, 'show']);
+Route::get('/create', [CitiesController::class, 'create']);
+Route::post('/store', [CitiesController::class, 'store']);
