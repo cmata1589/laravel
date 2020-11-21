@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Place;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->createPlaces();
+    }
+
+    private function createPlaces()
+    {
+        $place = [
+            'name' => 'Caracas',
+            'url' => 'www.caracas.com',
+            'description' => 'description test'
+        ];
+
+        $placeModel = new Place();
+
+        $placeModel->name = $place['name'];
+        $placeModel->url = $place['url'];
+        $placeModel->description = $place['description'];
+
+        $placeModel->save();
     }
 }
