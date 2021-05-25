@@ -74,8 +74,8 @@
 <!-- Footer Elements -->
 
 <!-- Copyright -->
-<div class="footer-copyright text-center py-3">© 2020 Copyright:
-  <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+<div class="footer-copyright text-center py-3" style="color:#fff">© 2020 Copyright:
+  <a > My Digital Consulting</a>
 </div>
 <!-- Copyright -->
 

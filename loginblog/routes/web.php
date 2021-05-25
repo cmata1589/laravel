@@ -28,3 +28,6 @@ Route::get('/', [CitiesController::class, 'index']);
 Route::get('/places/{place}', [CitiesController::class, 'show']);
 Route::get('/create', [CitiesController::class, 'create']);
 Route::post('/store', [CitiesController::class, 'store']);
+
+Route::get('/logout', [CitiesController::class, 'logout']);
+Route::get('/places/delete', [CitiesController::class, 'destroy']);

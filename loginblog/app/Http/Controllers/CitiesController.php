@@ -112,6 +112,26 @@
          */
         public function destroy(City $city)
         {
-            //
+            dd($city);
+           // $city-> delete();
+            return redirect('/');
         }
+
+
+            public function logout(Request $request)
+            {
+                Auth::logout();
+            
+                $request->session()->invalidate();
+            
+                $request->session()->regenerateToken();
+            
+                return redirect('/');
+            }
+           
+        
+
+
+
+
     }

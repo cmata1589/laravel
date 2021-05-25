@@ -51,6 +51,9 @@
                                     <li class="nav-item">
                                         <a href="{{ url('/create') }}" class="nav-link">Post a place!</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url('/logout') }}" class="nav-link">Log out</a>
+                                    </li>
                                 @else
                                 <li class="nav-item underline" style="float:right">
                                     <a href="{{ route('login') }}" class="nav-link">Login</a>
